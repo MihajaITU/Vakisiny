@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en"><link type="text/css" id="dark-mode" rel="stylesheet" href=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<link rel="apple-touch-icon" sizes="76x76" href="http://localhost/Hackathon/DEV/indexController/assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="http://localhost/Hackathon/DEV/indexController/assets/img/favicon.png">	
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Calendrier des Cultures</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="viewport" content="width=device-width">
+	
+    <link href="Calendrier%20des%20Cultures_fichiers/bootstrap.css" rel="stylesheet">
+	<link href="Calendrier%20des%20Cultures_fichiers/gsdk.css" rel="stylesheet">  
+    <link href="Calendrier%20des%20Cultures_fichiers/demo.css" rel="stylesheet"> 
+    
+    <!--     Font Awesome     -->
+    <link href="Calendrier%20des%20Cultures_fichiers/font-awesome.html" rel="stylesheet">
+    <link href="Calendrier%20des%20Cultures_fichiers/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="navbar-full">
+    <div class="container">
+        <nav class="navbar navbar-ct-blue navbar-transparent navbar-fixed-top" role="navigation">
+          
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="http://creative-tim.com/">
+                     <div class="logo-container">
+                        <div class="logo">
+                            <img src="Calendrier%20des%20Cultures_fichiers/unnamed.html">
+                        </div>
+                        <div class="brand">
+                            Hackaton
+                        </div>
+                    </div>
+                </a>
+            </div>
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://localhost/Hackathon/DEV/IndexController/AdminLogin" class="btn btn-round btn-default"> Login </a></li>
+                    <li><a href="http://localhost/Hackathon/DEV/PdfController" class="btn btn-round btn-default">Download PDF</a></li>
+                    <li><a href="http://localhost/Hackathon/DEV/MultilingueController">Traduire des mots</a></li>
+                    
+                    <li><a href="http://localhost/Hackathon/DEV/IndexController/UpdateMeteo">UpdateMeteo</a></li>
+                    <li><a href="http://localhost/Hackathon/DEV/IndexController/InsertCase">InsertCase</a></li>
+               </ul>
+              
+
+              
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+    </div><!--  end container-->
+    
+    <div class="blurred-container">
+        <div class="motto">
+            <div>Get</div>
+            <div class="border no-right-border">Sh</div><div class="border">it</div>
+            <div>Done</div>
+        </div>
+        <div class="img-src" style="background-image: url('http://localhost/Hackathon/DEV/assets/img/back.jpg')"></div>
+        <div class="img-src blur" style="background-image: url('http://localhost/Hackathon/DEV/assets/img/back.jpg')"></div>
+    </div>
+    
+</div>     
+    
+
+
+<div class="main">
+    <div class="container tim-container">
+       
+        <div class="tim-title">
+            <h1>Calendrier Culturel</h1>
+            <br> 
+            <div class="form-group">
+            <h3>Choisir votre Région</h3>
+
+            <form action="http://localhost/Hackathon/DEV/indexController/AfficheCalendrier" method="get">
+       
+            <select class="form-control" name="idregion">
+                            <option value="1" selected="selected">Alaotra</option>
+                                <option value="2">Mangoro</option>
+                                <option value="3">Analamanga</option>
+                                <option value="4">Analanjirofo</option>
+                                <option value="5">Taolagnaro</option>
+                                <option value="6">Betroka,Amboasary</option>
+                                <option value="7">Beroroha,Ankazoabe,Sakaraha,Benenitra</option>
+                                <option value="8">Antsinanana</option>
+                                <option value="9">Betsiboka</option>
+                                <option value="10">Boeny</option>
+                                <option value="11">Bongolava</option>
+                                <option value="12">Antsiranana</option>
+                                <option value="13">Ambilobe,Ambanja</option>
+                                <option value="14">Haute_Matsiatra</option>
+                                <option value="15">Ihorombe</option>
+                                <option value="16">Itasy</option>
+                                <option value="17">Melaky</option>
+                                <option value="18">Morondava,Belo sur Tsiribihina,Manja</option>
+                                <option value="19">Mahambo,Miandrivazo</option>
+                                <option value="20">Sofia</option>
+                                <option value="21">Vakinakaratra</option>
+                                <option value="22">Alaotra</option>
+                                <option value="23">Mangoro</option>
+                                <option value="24">Analamanga</option>
+                                <option value="25">Analanjirofo</option>
+                                <option value="26">Taolagnaro</option>
+                                <option value="27">Betroka,Amboasary</option>
+                                <option value="28">Beroroha,Ankazoabe,Sakaraha,Benenitra</option>
+                                <option value="29">Antsinanana</option>
+                                <option value="30">Betsiboka</option>
+                                <option value="31">Boeny</option>
+                                <option value="32">Bongolava</option>
+                                <option value="33">Antsiranana</option>
+                                <option value="34">Ambilobe,Ambanja</option>
+                                <option value="35">Haute_Matsiatra</option>
+                                <option value="36">Ihorombe</option>
+                                <option value="37">Itasy</option>
+                                <option value="38">Melaky</option>
+                                <option value="39">Morondava,Belo sur Tsiribihina,Manja</option>
+                                <option value="40">Mahambo,Miandrivazo</option>
+                                <option value="41">Sofia</option>
+                                <option value="42">Vakinakaratra</option>
+                        </select>
+                <h3>Choisir la culture/Variete</h3>
+        <select class="form-control" name="idculture">
+                                <option value="1" selected="selected">Riz plateau /  Narica 4,B22,Sebota 70</option>
+                                <option value="2">Riz bas fond /  Makalioka(mk34),Tsemaka,Dista</option>
+                                <option value="3">Maïs /  Irat 200,Volasoa</option>
+                                <option value="4">Maïs /  locale</option>
+                                <option value="5">Riz plateau /  Narica 4,B22,Sebota 70</option>
+                                <option value="6">Riz bas fond /  Makalioka(mk34),Tsemaka,Dista</option>
+                                <option value="7">Maïs /  Irat 200,Volasoa</option>
+                                <option value="8">Maïs /  locale</option>
+                        </select>
+        <br>
+        <button type="submit" class="btn btn-success">Valider</button>
+                </form>
+    </div>
+
+        </div><table class="table">
+        <thead>
+        <tr>
+            <th style="width:100; height:50;">Mois</th>
+            <th scope="col" colspan="3">Octobre</th>
+            <th scope="col" colspan="3">Novembre</th>
+            <th scope="col" colspan="3">Decembre</th> 
+            <th scope="col" colspan="3">Janvier</th>
+            <th scope="col" colspan="3">Fevrier</th>
+            <th scope="col" colspan="3">Mars</th>
+            <th scope="col" colspan="3">Avril</th>
+            <th scope="col" colspan="3">Mai</th>
+            <th scope="col" colspan="3">Juin</th>
+            <th scope="col" colspan="3">Juillet</th><th scope="col" colspan="3">Aout</th>
+            <th scope="col" colspan="3">Septembre</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+                <tr>   
+          <th scope="row">Decade</th>
+                      <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                     <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                     <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                     <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                     <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                     <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                     <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                     <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                     <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                     <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                     <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                     <td>D1</td>
+            <td>D2</td>
+            <td>D3</td> 
+                 </tr>
+        <tr>   
+          <th scope="row">Préparation du sol</th>
+                           
+
+                     
+
+                             
+            <td></td>
+            <td></td>
+            <td></td>  
+                                               
+                    <td>debut </td>
+                    <td> </td>
+                    <td> fin</td> 
+                     
+
+                     
+
+                             
+            <td></td>
+            <td></td>
+            <td></td>  
+                            
+                             
+
+                     
+
+                             
+            <td></td>
+            <td></td>
+            <td></td>  
+                             
+
+                     
+
+                             
+            <td></td>
+            <td></td>
+            <td></td>  
+                             
+
+                     
+
+                             
+            <td></td>
+            <td></td>
+            <td></td>  
+                             
+
+                     
+
+                             
+            <td></td>
+            <td></td>
+            <td></td>  
+                             
+
+                     
+
+                             
+            <td></td>
+            <td></td>
+            <td></td>  
+                             
+
+                     
+
+                             
+            <td></td>
+            <td></td>
+            <td></td>  
+                             
+
+                     
+
+                             
+            <td></td>
+            <td></td>
+            <td></td>  
+                             
+
+                     
+
+                             
+            <td></td>
+            <td></td>
+            <td></td>  
+                             
+
+                     
+
+                             
+            <td></td>
+            <td></td>
+            <td></td>  
+            
+        </tr>
+        
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      
+
+        </tbody></table>
+            </div>
+
+
+<!-- end main -->
+
+<div class="parallax-pro">
+    <div class="img-src" style="background-image: url('http://localhost/Hackathon/DEV/assets/img/back.jpg')"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>
+                    <small>
+                       Don't forget to check our latest release:<a>
+                    </a></small><a>
+                </a></h1><a>
+            </a></div><a>
+            </a><div class="col-md-6 col-md-offset-3 col-md-12 text-center"><a>
+                </a><h1 class="hello text-center"><a>
+                   </a><a href="http://gsdk.creative-tim.com/">Get Shit Done Kit <span class="label label-warning"> Pro</span></a>
+                   <small>
+                    <ul class="list-unstyled">
+                        <li>50+ new elements</li>
+                        <li>LESS and SASS files</li>
+                        <li>PSD for designers</li>
+                        <li>New Font Icons </li>
+                    </ul>
+                    </small>
+                </h1>
+                 <div class="actions">
+                     <a class="btn btn-lg btn-warning btn-fill" href="http://gsdk.creative-tim.com/?ref=get-shit-done">Live Preview Kit</a>
+                </div>
+            </div>
+        </div>
+        <div class="space-30"></div>
+        <div class="row">
+             <div class="col-md-12 text-center">
+                <div class="credits">
+                    © <script>document.write(new Date().getFullYear())</script>2021 Get Shit Done Kit by <a href="http://creative-tim.com/"> Creative Tim</a>, made with <i class="fa fa-heart heart" alt="love"></i> for a better web.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+  
+
+    <script src="Calendrier%20des%20Cultures_fichiers/jquery-1.html" type="text/javascript"></script>
+	<script src="Calendrier%20des%20Cultures_fichiers/jquery-ui-1.html"></script>
+
+	<script src="Calendrier%20des%20Cultures_fichiers/bootstrap.html" type="text/javascript"></script>
+	<script src="Calendrier%20des%20Cultures_fichiers/gsdk-checkbox.js"></script>
+	<script src="Calendrier%20des%20Cultures_fichiers/gsdk-radio.js"></script>
+	<script src="Calendrier%20des%20Cultures_fichiers/gsdk-bootstrapswitch.js"></script>
+	<script src="Calendrier%20des%20Cultures_fichiers/get-shit-done.js"></script>
+    <script src="Calendrier%20des%20Cultures_fichiers/custom.js"></script>
+    
+<script type="text/javascript">
+         
+    $('.btn-tooltip').tooltip();
+    $('.label-tooltip').tooltip();
+    $('.pick-class-label').click(function(){
+        var new_class = $(this).attr('new-class');  
+        var old_class = $('#display-buttons').attr('data-class');
+        var display_div = $('#display-buttons');
+        if(display_div.length) {
+        var display_buttons = display_div.find('.btn');
+        display_buttons.removeClass(old_class);
+        display_buttons.addClass(new_class);
+        display_div.attr('data-class', new_class);
+        }
+    });
+    $( "#slider-range" ).slider({
+		range: true,
+		min: 0,
+		max: 500,
+		values: [ 75, 300 ],
+	});
+	$( "#slider-default" ).slider({
+			value: 70,
+			orientation: "horizontal",
+			range: "min",
+			animate: true
+	});
+	$('.carousel').carousel({
+      interval: 4000
+    });
+    // Material Select
+    $('#toky').materialSelect({
+    });
+      
+    
+</script>
+</div></body></html>
