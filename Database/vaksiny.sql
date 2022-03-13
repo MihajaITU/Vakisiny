@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Dim 13 Mars 2022 à 09:25
+-- Généré le :  Dim 13 Mars 2022 à 09:34
 -- Version du serveur :  5.7.30-log
 -- Version de PHP :  5.6.18
 
@@ -74,6 +74,17 @@ CREATE TABLE `personne` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `region`
+--
+
+CREATE TABLE `region` (
+  `id` int(11) NOT NULL,
+  `designation` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `vita_vaksiny`
 --
 
@@ -118,6 +129,12 @@ ALTER TABLE `personne`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `region`
+--
+ALTER TABLE `region`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `vita_vaksiny`
 --
 ALTER TABLE `vita_vaksiny`
@@ -149,6 +166,11 @@ ALTER TABLE `maison_personne`
 ALTER TABLE `personne`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT pour la table `region`
+--
+ALTER TABLE `region`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT pour la table `vita_vaksiny`
 --
 ALTER TABLE `vita_vaksiny`
@@ -156,6 +178,12 @@ ALTER TABLE `vita_vaksiny`
 --
 -- Contraintes pour les tables exportées
 --
+
+--
+-- Contraintes pour la table `fokotany`
+--
+ALTER TABLE `fokotany`
+  ADD CONSTRAINT `fokotany_ibfk_1` FOREIGN KEY (`id_region`) REFERENCES `region` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `maison`
